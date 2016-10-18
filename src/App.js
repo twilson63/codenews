@@ -24,8 +24,8 @@ module.exports = React.createClass({
     return h('div.pa4.bg-blue.vh-100', [
      h(Header, { title: "Tom's Code News!"}),
      h('main', [
-       h(List, { items:
-         this.state.items, onScoreChange: this.scoreChanged
+       h(List, { items: this.state.items,
+         onScoreChange: this.scoreChanged
        }),
        h(Form)
      ])
