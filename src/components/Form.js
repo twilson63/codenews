@@ -28,7 +28,7 @@ module.exports = React.createClass({
   },
   render: function () {
     return (
-      h('section.form', [
+      h('section.form.w-50', [
         h('h2.f4.white', 'Add News'),
         h('form', { onSubmit: this.submit }, [
           h('div.pb2', [
@@ -44,7 +44,7 @@ module.exports = React.createClass({
               value: this.state.link })
           ]),
           h('div.tr', [
-            h('button', 'Add News')
+            h('button.f6.link.dim.br2.ph3.pv2.mb2 dib white bg-navy', 'Add News')
           ])
         ])
       ])
