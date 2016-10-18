@@ -5,37 +5,20 @@ var items = [{ id: 1,
     score: 0
 }]
 
-module.exports = () => h('div.pa4.bg-blue.vh-100', [
- h('header', [
-   h('h1.f3.white', 'Code News!')
- ]),
- h('main', [
-   h('section.list', [
-     h('ul', items.map(item =>
-       h('li', [
-         h('a', {href: item.link}, item.title),
-         h('button', 'Up'),
-         h('button', 'Down'),
-         h('span', item.score)
-       ])
-     ))
+var obj = {
+  foo: 'string',
+  bar: 'string2',
+  baz: 'string3'
+}
 
-   ]),
-   h('section.form', [
-     h('h2.f4.white', 'Add News'),
-     h('form', [
-       h('div.pb2', [
-         h('label.mr1', 'Title'),
-         h('input')
-       ]),
-       h('div.pb2', [
-         h('label.mr1', 'Link'),
-         h('input')
-       ]),
-       h('div.tr', [
-         h('button', 'Add News')
-       ])
-     ])
-   ])
+const Header = require('./components/Header.js')
+const List = require('./components/List.js')
+const Form = require('./components/Form.js')
+
+module.exports = () => h('div.pa4.bg-blue.vh-100', [
+ Header(),
+ h('main', [
+   List({items}),
+   Form()
  ])
 ])
